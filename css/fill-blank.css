@@ -1,0 +1,297 @@
+/* ==========================================================================
+   MYENGLISHLIB - FILL IN THE BLANK (MULTIPLE CHOICE) STYLES
+   ========================================================================== */
+
+.fill-blank-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+/* Question Box */
+.fill-blank-card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: 32px 36px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef2f7;
+  margin-bottom: 24px;
+  transition: all 0.2s ease;
+}
+
+.fill-blank-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fill-blank-type-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-light-blue);
+  color: var(--primary-blue);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13.5px;
+  font-weight: 700;
+  border: 1px solid #d0e4ff;
+}
+
+/* Sentence with Blank Slot */
+.fill-blank-sentence-box {
+  background: #f8fbfe;
+  border: 2px solid #dbe6f4;
+  border-radius: 20px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+
+.fill-blank-sentence {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2530;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* The Blank Slot in the Sentence */
+.blank-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 38px;
+  padding: 0 16px;
+  margin: 0 4px;
+  background: #ffffff;
+  border: 2.5px dashed #4786E3;
+  border-radius: 12px;
+  color: #0950AE;
+  font-weight: 700;
+  font-size: 20px;
+  vertical-align: middle;
+  transition: all 0.25s ease;
+}
+
+.blank-slot.filled-correct {
+  border: 2px solid #27ae60;
+  background: #eafaf1;
+  color: #1e7e34;
+  box-shadow: 0 2px 6px rgba(39, 174, 96, 0.15);
+  animation: slotPop 0.25s ease;
+}
+
+.blank-slot.filled-incorrect {
+  border: 2px solid #ea2b2b;
+  background: #ffdfe0;
+  color: #c0392b;
+  animation: slotPop 0.25s ease;
+}
+
+@keyframes slotPop {
+  0% { transform: scale(0.9); }
+  60% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Vietnamese Context Translation - Hidden initially, revealed when user selects an answer */
+.fill-blank-translation {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: none;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1.5;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #dbe6f4;
+  animation: fadeIn 0.3s ease;
+}
+
+.fill-blank-translation.is-visible {
+  display: flex;
+}
+
+.fill-blank-translation strong {
+  color: var(--secondary-blue);
+  flex-shrink: 0;
+}
+
+/* Audio button inside sentence box */
+.fill-blank-audio-btn {
+  background: var(--white);
+  border: 2px solid #dbe6f4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-blue);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.fill-blank-audio-btn:hover {
+  background: var(--bg-light-blue);
+  border-color: var(--primary-blue);
+  transform: scale(1.08);
+}
+
+/* 4 Multiple Choice Options Grid (2x2 on desktop, 1 col on mobile) */
+.fill-blank-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  .fill-blank-options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fill-blank-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--white);
+  border: 2px solid #d5e4f7;
+  border-bottom: 4px solid #b8cadb;
+  border-radius: 16px;
+  font-family: var(--font-family-base);
+  font-size: 17px;
+  font-weight: 700;
+  color: #2c3e50;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.1s ease, border-color 0.15s ease, background 0.15s ease;
+  user-select: none;
+}
+
+.fill-blank-option-btn:hover:not(:disabled) {
+  border-color: var(--primary-blue);
+  background: #f7faff;
+  color: var(--primary-blue);
+}
+
+.fill-blank-option-btn:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+.fill-blank-option-letter {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #eef4fc;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14.5px;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.fill-blank-option-btn:hover:not(:disabled) .fill-blank-option-letter {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+/* Option States on Answer */
+.fill-blank-option-btn.correct {
+  background: #eafaf1 !important;
+  border-color: #27ae60 !important;
+  border-bottom-color: #1e7e34 !important;
+  color: #1e7e34 !important;
+}
+
+.fill-blank-option-btn.correct .fill-blank-option-letter {
+  background: #27ae60 !important;
+  color: #ffffff !important;
+}
+
+.fill-blank-option-btn.incorrect {
+  background: #ffdfe0 !important;
+  border-color: #ea2b2b !important;
+  border-bottom-color: #ba1e1e !important;
+  color: #9e1414 !important;
+}
+
+.fill-blank-option-btn.incorrect .fill-blank-option-letter {
+  background: #ea2b2b !important;
+  color: #ffffff !important;
+}
+
+.fill-blank-option-btn:disabled {
+  cursor: default;
+}
+
+/* Feedback Box */
+.fill-blank-feedback {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  font-size: 15.5px;
+  font-weight: 700;
+  display: none;
+}
+
+.fill-blank-feedback.is-correct {
+  display: flex;
+  background: #d7ffb8;
+  color: #2b6100;
+  border: 1px solid #a4eb6a;
+}
+
+.fill-blank-feedback.is-incorrect {
+  display: flex;
+  background: #ffdfe0;
+  color: #9e1414;
+  border: 1px solid #ff9da1;
+}
+
+.btn-fill-next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 40px;
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 0 var(--primary-shadow-blue);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.btn-fill-next:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 var(--primary-shadow-blue);
+}
+
+.btn-fill-next:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--primary-shadow-blue);
+}

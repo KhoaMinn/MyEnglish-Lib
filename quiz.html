@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyEnglishLib - Thử Thách Trắc Nghiệm Từ Vựng Cambridge A1 & A2</title>
+  <meta name="description" content="Phòng thi thử thách trắc nghiệm từ vựng tiếng Anh Cambridge A1 Movers và A2 Flyers. Tính điểm và kích hoạt phản xạ từ vựng.">
+
+  <!-- Google Font: Quicksand (style.md) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23FFCB08'/><circle cx='36' cy='42' r='6' fill='%230F1114'/><circle cx='64' cy='42' r='6' fill='%230F1114'/><path d='M38 60 Q50 72 62 60' stroke='%230F1114' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <!-- HEADER NAVBAR (style.md: Section 4.3) -->
+    <header class="mochi-header">
+      <a href="index.html" class="header-brand">
+        <div class="brand-icon">
+          <svg width="28" height="28" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="#FFCB08" />
+            <ellipse cx="36" cy="42" rx="5" ry="6" fill="#0F1114" />
+            <ellipse cx="64" cy="42" rx="5" ry="6" fill="#0F1114" />
+            <circle cx="38" cy="40" r="2" fill="#FFFFFF" />
+            <circle cx="66" cy="40" r="2" fill="#FFFFFF" />
+            <ellipse cx="28" cy="52" rx="6" ry="3.5" fill="#FF8A80" opacity="0.8" />
+            <ellipse cx="72" cy="52" rx="6" ry="3.5" fill="#FF8A80" opacity="0.8" />
+            <path d="M38 58 Q50 70 62 58" stroke="#0F1114" stroke-width="4.5" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="brand-title-group">
+          <h1>MyEnglishLib</h1>
+          <span>Trắc Nghiệm Quiz</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="header-nav">
+        <a href="index.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          Lộ Trình Học
+        </a>
+        <a href="dictionary.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Từ Điển (880)
+        </a>
+        <a href="flashcard.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          Thẻ Ghi Nhớ 3D
+        </a>
+        <a href="scramble.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 12h10M4 18h16"></path></svg>
+          Ghép Câu
+        </a>
+        <a href="fill-blank.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          Điền Từ
+        </a>
+        <a href="quiz.html" class="nav-tab-btn active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          Trắc Nghiệm
+        </a>
+      </nav>
+
+      <div class="header-stats">
+        <div class="stat-chip streak" title="Chuỗi ngày học liên tục">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4511E" style="vertical-align: -2px; margin-right: 4px;"><path d="M12 2c-.6 2.5-3 4.5-3 7 0 3.3 2.7 6 6 6s6-2.7 6-6c0-2.5-2.4-4.5-3-7 0 0-1 2-2 2s-1.5-1-1.5-1-1 1.5-2.5 1.5S12 2 12 2z"/></svg><span id="statStreak">1</span> ngày
+        </div>
+        <div class="stat-chip learned" title="Số từ vựng đã thuộc">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2.5" style="vertical-align: -2px; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg><span id="statLearnedCount">0</span>/880 từ
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="main-container">
+
+      <!-- SECTION TITLE WITH PILL BARS (style.md: Section 4.2) -->
+      <div class="mochi-section-header">
+        <span class="pill-bar"></span>
+        <h2>Phòng Luyện Trắc Nghiệm Tương Tác</h2>
+        <span class="pill-bar"></span>
+      </div>
+
+      <!-- 1. SETUP VIEW (Shown before generating exercises) -->
+      <section id="quizSetupView">
+        <div class="practice-setup-card">
+          <div class="setup-grid">
+            <!-- 1. Lộ Trình Bài Học -->
+            <div class="setup-field">
+              <label class="setup-field-label" for="setupQuizStage">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+                Lộ Trình Bài Học
+              </label>
+              <span class="setup-field-desc">Chọn chặng trong lộ trình 10 chặng</span>
+              <select class="custom-select" id="setupQuizStage" aria-label="Chọn chặng lộ trình">
+                <option value="all">Tất cả 10 chặng (880 từ vựng)</option>
+              </select>
+            </div>
+
+            <!-- 2. Số Lượng Câu Hỏi -->
+            <div class="setup-field">
+              <label class="setup-field-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Số Lượng Câu Hỏi
+              </label>
+              <span class="setup-field-desc">Thời lượng phù hợp với thời gian học</span>
+              <div class="chip-selector" id="setupQuizCountGroup">
+                <button type="button" class="chip-btn active" data-count="10">10 câu</button>
+                <button type="button" class="chip-btn" data-count="20">20 câu</button>
+                <button type="button" class="chip-btn" data-count="30">30 câu</button>
+                <button type="button" class="chip-btn" data-count="all">Tất cả</button>
+              </div>
+            </div>
+
+            <!-- 3. Dạng Luyện -->
+            <div class="setup-field">
+              <label class="setup-field-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                Dạng Luyện
+              </label>
+              <span class="setup-field-desc">Tập trung nhận diện nghĩa hoặc từ vựng</span>
+              <div class="chip-selector" id="setupQuizModeGroup">
+                <button type="button" class="chip-btn active" data-mode="mixed">Hỗn hợp cả hai</button>
+                <button type="button" class="chip-btn" data-mode="en_to_vi">Từ Anh ➔ Nghĩa Việt</button>
+                <button type="button" class="chip-btn" data-mode="vi_to_en">Nghĩa Việt ➔ Từ Anh</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Setup Footer Action -->
+          <div class="setup-footer">
+            <div class="setup-summary-badge" id="setupQuizSummaryBadge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Kho từ khả dụng: 880 từ vựng</span>
+            </div>
+            <button class="setup-btn-start" id="btnStartQuiz">
+              <span>Bắt Đầu Làm Bài Trắc Nghiệm</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. EXERCISE VIEW (Active quiz session) -->
+      <section id="quizExerciseView" style="display: none;">
+        <div class="exercise-top-bar">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="badge-level" id="exerciseQuizScopeBadge">Chủ đề: Tất cả • 10 câu</span>
+          </div>
+          <button class="btn-reconfigure" id="btnReconfigQuiz" title="Quay lại cài đặt để đổi chủ đề hoặc số câu">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            Đổi Thiết Lập Bài
+          </button>
+        </div>
+
+        <!-- QUIZ ENGINE CONTAINER -->
+        <div id="quizContainer"></div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mochi-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>MyEnglishLib</h3>
+          <p>Thư viện tự học 880 từ vựng tiếng Anh theo chuẩn Cambridge Young Learners (Pre A1 Starters, A1 Movers, A2 Flyers).</p>
+          <p>Học từ vựng trực quan với Lộ trình 10 chặng, Từ điển tra cứu, Thẻ ghi nhớ 3D và Trắc nghiệm phản xạ.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Các Chế Độ Học</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Bản đồ lộ trình học 10 chặng</a></li>
+            <li><a href="dictionary.html">Từ điển tra cứu 880 từ</a></li>
+            <li><a href="flashcard.html">Luyện thẻ ghi nhớ 3D</a></li>
+            <li><a href="scramble.html">Ghép câu tương tác Duolingo</a></li>
+            <li><a href="fill-blank.html">Điền từ vào chỗ trống</a></li>
+            <li><a href="quiz.html">Thử thách trắc nghiệm</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Tài Liệu & Nguồn Học</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.cambridgeenglish.org/exams-and-tests/qualifications/young-learners/" target="_blank">Cambridge Assessment English</a></li>
+            <li><a href="https://dictionary.cambridge.org/" target="_blank">Cambridge English Dictionary</a></li>
+            <li><a href="dictionary.html">Toàn bộ 880 từ vựng chuẩn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 MyEnglishLib • Multi-Page Architecture • Đã tối ưu cho Desktop & Mobile
+      </div>
+    </footer>
+
+  </div>
+
+  <script type="module" src="js/quiz-page.js"></script>
+</body>
+</html>

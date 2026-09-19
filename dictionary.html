@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyEnglishLib - Từ Điển & Tra Cứu 880 Từ Vựng Cambridge A1 & A2</title>
+  <meta name="description" content="Tra cứu toàn bộ 880 từ vựng Cambridge A1 Movers và A2 Flyers. Lọc theo chặng học, từ loại, chủ đề và phát âm chuẩn bản xứ.">
+
+  <!-- Google Font: Quicksand (style.md) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23FFCB08'/><circle cx='36' cy='42' r='6' fill='%230F1114'/><circle cx='64' cy='42' r='6' fill='%230F1114'/><path d='M38 60 Q50 72 62 60' stroke='%230F1114' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <!-- HEADER NAVBAR (style.md: Section 4.3) -->
+    <header class="mochi-header">
+      <a href="index.html" class="header-brand">
+        <div class="brand-icon">
+          <svg width="28" height="28" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="#FFCB08" />
+            <ellipse cx="36" cy="42" rx="5" ry="6" fill="#0F1114" />
+            <ellipse cx="64" cy="42" rx="5" ry="6" fill="#0F1114" />
+            <circle cx="38" cy="40" r="2" fill="#FFFFFF" />
+            <circle cx="66" cy="40" r="2" fill="#FFFFFF" />
+            <ellipse cx="28" cy="52" rx="6" ry="3.5" fill="#FF8A80" opacity="0.8" />
+            <ellipse cx="72" cy="52" rx="6" ry="3.5" fill="#FF8A80" opacity="0.8" />
+            <path d="M38 58 Q50 70 62 58" stroke="#0F1114" stroke-width="4.5" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="brand-title-group">
+          <h1>MyEnglishLib</h1>
+          <span>Từ Điển 880 Từ</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="header-nav">
+        <a href="index.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          Lộ Trình Học
+        </a>
+        <a href="dictionary.html" class="nav-tab-btn active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Từ Điển (880)
+        </a>
+        <a href="flashcard.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          Thẻ Ghi Nhớ 3D
+        </a>
+        <a href="scramble.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 12h10M4 18h16"></path></svg>
+          Ghép Câu
+        </a>
+        <a href="fill-blank.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          Điền Từ
+        </a>
+        <a href="quiz.html" class="nav-tab-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          Trắc Nghiệm
+        </a>
+      </nav>
+
+      <div class="header-stats">
+        <div class="stat-chip streak" title="Chuỗi ngày học liên tục">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4511E" style="vertical-align: -2px; margin-right: 4px;"><path d="M12 2c-.6 2.5-3 4.5-3 7 0 3.3 2.7 6 6 6s6-2.7 6-6c0-2.5-2.4-4.5-3-7 0 0-1 2-2 2s-1.5-1-1.5-1-1 1.5-2.5 1.5S12 2 12 2z"/></svg><span id="statStreak">1</span> ngày
+        </div>
+        <div class="stat-chip learned" title="Số từ vựng đã thuộc">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2.5" style="vertical-align: -2px; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg><span id="statLearnedCount">0</span>/880 từ
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="main-container">
+
+      <!-- SECTION TITLE WITH PILL BARS (style.md: Section 4.2) -->
+      <div class="mochi-section-header">
+        <span class="pill-bar"></span>
+        <h2>Kho Từ Điển Tra Cứu Cambridge A1 & A2</h2>
+        <span class="pill-bar"></span>
+      </div>
+
+      <!-- FILTER & SEARCH PANEL -->
+      <div class="controls-panel">
+        <div class="search-row">
+          <div class="search-input-wrapper">
+            <span class="search-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+            <input type="text" id="searchInput" placeholder="Tìm kiếm từ tiếng Anh, nghĩa tiếng Việt hoặc chủ đề... (Ví dụ: clever, sân bay, Animals)" autocomplete="off">
+          </div>
+          <div class="result-count-badge" id="resultCountBadge">880 từ vựng</div>
+        </div>
+
+        <div class="filter-tags-row">
+          <!-- Level Selector -->
+          <div class="level-selector-group">
+            <button class="level-btn active" data-level="all">Tất cả (880)</button>
+            <button class="level-btn" data-level="A1">A1 Movers (384)</button>
+            <button class="level-btn" data-level="A2">A2 Flyers (496)</button>
+          </div>
+
+          <!-- Dropdowns -->
+          <div class="dropdown-group">
+            <select class="custom-select" id="filterStage" aria-label="Lọc theo chặng lộ trình">
+              <option value="all">Tất cả chặng học (1-10)</option>
+            </select>
+            <select class="custom-select" id="filterPos" aria-label="Lọc theo từ loại">
+              <option value="all">Tất cả từ loại</option>
+            </select>
+            <select class="custom-select" id="filterTopic" aria-label="Lọc theo chủ đề">
+              <option value="all">Tất cả chủ đề</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- VOCABULARY GRID -->
+      <section id="sectionDictionary">
+        <div class="vocab-grid" id="vocabGrid">
+          <!-- Injected dynamically via JS -->
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <button class="btn-3d-secondary" id="btnLoadMore" style="display: none; padding: 12px 40px;">
+            Xem thêm từ vựng khác
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: 6px; vertical-align: -2px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mochi-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>MyEnglishLib</h3>
+          <p>Thư viện tự học 880 từ vựng tiếng Anh theo chuẩn Cambridge Young Learners (Pre A1 Starters, A1 Movers, A2 Flyers).</p>
+          <p>Học từ vựng trực quan với Lộ trình 10 chặng, Từ điển tra cứu, Thẻ ghi nhớ 3D và Trắc nghiệm phản xạ.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Các Chế Độ Học</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Bản đồ lộ trình học 10 chặng</a></li>
+            <li><a href="dictionary.html">Từ điển tra cứu 880 từ</a></li>
+            <li><a href="flashcard.html">Luyện thẻ ghi nhớ 3D</a></li>
+            <li><a href="scramble.html">Ghép câu tương tác Duolingo</a></li>
+            <li><a href="fill-blank.html">Điền từ vào chỗ trống</a></li>
+            <li><a href="quiz.html">Thử thách trắc nghiệm</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Tài Liệu & Nguồn Học</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.cambridgeenglish.org/exams-and-tests/qualifications/young-learners/" target="_blank">Cambridge Assessment English</a></li>
+            <li><a href="https://dictionary.cambridge.org/" target="_blank">Cambridge English Dictionary</a></li>
+            <li><a href="dictionary.html">Toàn bộ 880 từ vựng chuẩn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 MyEnglishLib • Multi-Page Architecture • Đã tối ưu cho Desktop & Mobile
+      </div>
+    </footer>
+
+  </div>
+
+  <script type="module" src="js/dictionary-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+/* ==========================================================================
+   MOCHI ENGLISH - ROADMAP & GOAL SETTING STYLESHEET
+   Strictly adheres to Mochi IELTS Design System Guide (style.md)
+   ========================================================================== */
+
+/* Daily Goal Setting Card */
+.goal-card-section {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e2efff 100%);
+  border: 2px solid #cce1ff;
+  border-radius: var(--radius-round);
+  padding: 30px 32px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 24px rgba(71, 134, 227, 0.08);
+}
+
+.goal-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.goal-title-group h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.goal-title-group p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.daily-progress-meter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid #d0e4ff;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary-blue);
+}
+
+.goal-options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.goal-option-box {
+  background: var(--white);
+  border: 2px solid #d5e6ff;
+  border-radius: var(--radius-pill);
+  padding: 18px 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.goal-option-box:hover {
+  border-color: var(--primary-blue);
+  transform: translateY(-2px);
+}
+
+.goal-option-box.active {
+  border-color: var(--primary-blue);
+  background: #f4f9ff;
+  box-shadow: 0 4px 0 0 var(--primary-shadow-blue);
+}
+
+.goal-option-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.badge-easy { background: #e8f5e9; color: #2e7d32; }
+.badge-rec { background: #fff8e1; color: #b78103; }
+.badge-hard { background: #ffebee; color: #c62828; }
+
+.goal-option-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 4px;
+}
+
+.goal-option-time {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   ROADMAP MILESTONE PATH
+   ========================================================================== */
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  width: 100%;
+}
+
+/* Connecting Center Line */
+.roadmap-container::before {
+  content: '';
+  position: absolute;
+  left: 48px;
+  top: 40px;
+  bottom: 40px;
+  width: 6px;
+  background: #d5e6ff;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+/* Milestone Stage Item */
+.roadmap-stage-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s;
+}
+
+.roadmap-stage-node {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 4px solid var(--primary-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 0 0 var(--primary-shadow-blue);
+  transition: all 0.2s;
+}
+
+.roadmap-stage-node .node-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.roadmap-stage-node .node-number {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  margin-top: 4px;
+}
+
+/* Completed node styling */
+.roadmap-stage-card.completed .roadmap-stage-node {
+  border-color: var(--accent-green);
+  box-shadow: 0 6px 0 0 var(--accent-green-shadow);
+  background: #f0fff4;
+}
+
+.roadmap-stage-content {
+  flex: 1;
+  background: var(--white);
+  border: 2px solid #e2edff;
+  border-radius: var(--radius-round);
+  padding: 24px 28px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s;
+}
+
+.roadmap-stage-content:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: #bad8ff;
+  transform: translateY(-2px);
+}
+
+.stage-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stage-tag {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stage-tag.a1 {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.stage-tag.a2 {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.stage-badge-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #b78103;
+  background: #fff8e1;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.stage-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.stage-desc {
+  font-size: 14.5px;
+  color: var(--text-body);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.stage-progress-bar-wrap {
+  background: #edf4ff;
+  height: 10px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.stage-progress-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--primary-blue), var(--action-blue));
+  transition: width 0.4s ease;
+}
+
+.stage-progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  margin-bottom: 8px;
+}
+
+.stage-actions-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .goal-options-grid {
+    grid-template-columns: 1fr;
+  }
+  .roadmap-container::before {
+    display: none;
+  }
+  .roadmap-stage-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .roadmap-stage-content {
+    width: 100%;
+  }
+}
